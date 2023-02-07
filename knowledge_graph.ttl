@@ -1,0 +1,36 @@
+@prefix insta: <http://instagram.com/data/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+insta:user4 a insta:User ;
+    insta:followed_by insta:user2,
+        insta:user3 ;
+    insta:follows insta:user1,
+        insta:user2,
+        insta:user3 ;
+    insta:name "Jordan Stones"^^rdfs:Literal ;
+    insta:username "@jordan1" .
+
+insta:user1 a insta:User ;
+    insta:followed_by insta:user2 ;
+    insta:follows insta:user2,
+        insta:user3 ;
+    insta:name "Jude White"^^rdfs:Literal ;
+    insta:username "@jude" .
+
+insta:user2 a insta:User ;
+    insta:followed_by insta:user1,
+        insta:user3,
+        insta:user4,
+        insta:user5 ;
+    insta:follows insta:user3,
+        insta:user5 ;
+    insta:name "Emily Van de Beeck"^^rdfs:Literal ;
+    insta:username "@emily" .
+
+insta:user3 a insta:User ;
+    insta:followed_by insta:user1 ;
+    insta:follows insta:user1,
+        insta:user2 ;
+    insta:name "Wayne Peterson"^^rdfs:Literal ;
+    insta:username "@wayne" .
+

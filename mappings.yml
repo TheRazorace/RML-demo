@@ -1,0 +1,23 @@
+prefixes:
+ insta: "http://instagram.com/data/"
+
+mappings:
+    
+  people:
+    sources:
+      - ['people.csv~csv']
+    s: http://instagram.com/data/user$(Id)
+    po:
+      - [a, insta:User]
+      - [insta:username, $(Username)]
+      - [insta:name, "$(Name) $(Surname)", rdfs:Literal]
+      
+  followers:
+    sources:
+      - ['followers.json~jsonpath', '$.followers[*]']
+    s: http://instagram.com/data/user$(id)
+    po:
+      - [insta:follows,
+        http://instagram.com/data/user$(follows)~iri]
+      - [insta:followed_by,
+        http://instagram.com/data/user$(followed_by)~iri]
