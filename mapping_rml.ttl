@@ -15,7 +15,7 @@
 
 	rml:logicalSource [
 		a rml:LogicalSource;
-		rml:source "people.csv";
+		rml:source "RML-demo/people.csv";
 		rml:referenceFormulation ql:CSV
 	];
 	rr:subjectMap [
@@ -59,7 +59,7 @@
 
 	rml:logicalSource [
 		a rml:LogicalSource;
-		rml:source "followers.json";
+		rml:source "RML-demo/followers.json";
 		rml:referenceFormulation ql:JSONPath;
 		rml:iterator "$.followers[*]";
 	];
