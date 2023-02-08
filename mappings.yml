@@ -5,7 +5,7 @@ mappings:
     
   people:
     sources:
-      - ['people.csv~csv']
+      - ['RML-demo/people.csv~csv']
     s: http://instagram.com/data/user$(Id)
     po:
       - [a, insta:User]
@@ -14,7 +14,7 @@ mappings:
       
   followers:
     sources:
-      - ['followers.json~jsonpath', '$.followers[*]']
+      - ['RML-demo/followers.json~jsonpath', '$.followers[*]']
     s: http://instagram.com/data/user$(id)
     po:
       - [insta:follows,
